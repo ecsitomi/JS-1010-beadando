@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecsedi Tamás - Feladat 3</title>
+    <script>
+        function Koszontes() 
+        {
+            let koszont = "Szia";
+            const ido=new Date().getHours();
+            if (ido<12){
+                koszont="Jó reggelt";
+            }else if (12<ido<18){
+                koszont="Jó napot";
+            } else{
+                koszont="Jó estét";
+            }
+            alert(koszont);
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="Koszontes()">Köszöntés</button>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecsedi Tamás - Feladat 1</title>
+    <script>
+        function VeletlenSzam()
+        {
+            return Math.floor(Math.random()*100)+1;
+        }
+        function Ellenorzes()
+        {
+            let tipp=document.getElementById("tipp").value;
+            let eredmeny=document.getElementById("eredmeny");
+            if (randomSzam==tipp)
+            {
+                eredmeny.textContent="Helyes";
+            } else if (tipp>randomSzam) {
+                eredmeny.textContent="Nem talált, a véletlen szám kissebb.";
+            } else if (tipp<randomSzam) {
+                eredmeny.textContent="Nem talált, a véletlen szám nagyobb.";
+            }
+        }
+        let randomSzam = VeletlenSzam();
+
+    </script>
+</head>
+<body>
+    <p>Gondoltam egy számra 1 és 100 között</p>
+    <p>Melyik számra gondoltam?</p>
+    <input type="number" id="tipp">
+    <button onclick="Ellenorzes()">Ellenőrzés</button>
+    <P>Eredmény:</P>
+    <p id="eredmeny"></p>
+    <p>Új szám generálása</p>
+    <button onclick="VeletlenSzam()"></button>
+</body>
+</html>

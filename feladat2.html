@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecsedi Tamás - Feladat 2</title>
+    <script>
+        let a=document.getElementById("a").value;
+        let b=document.getElementById("b").value;
+        let c=document.getElementById("c").value;
+
+        function Szamol()
+        {
+            let kerulet= a+b+c;
+            let s = kerulet/2;
+            let terulet=Math.sqrt(s*(s-a)*(s-b)*(s-c));
+            document.getElementById("eredmeny").innerText="Kerület: ${kerulet}, Terület: ${terulet}"; 
+        }
+    </script>
+</head>
+<body>
+    <p>Háromszög kerület-terület
+        <br>
+        <label for="a">A oldal</label>
+        <input type="number" id="a">
+        <label for="b">B oldal</label>
+        <input type="number" id="b">
+        <label for="c">C oldal</label>
+        <input type="number" id="c">
+        <button onclick="Szamol()">Számol</button>
+        <br>
+        <span id="eredmeny"></span>
+    </p>
+    
+</body>
+</html>
